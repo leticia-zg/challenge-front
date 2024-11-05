@@ -1,0 +1,123 @@
+/* Configuração geral */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+nav {
+    border-bottom: 2px solid #2cb2ea;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    margin-top: 5px;
+}
+
+@media (min-width: 576px) {
+    .logo {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 991px) {
+    .logo {
+        margin-top: 5px;
+    }
+}
+
+/* Ícone do menu (hambúrguer) */
+.menu-icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+@media (min-width: 991px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Lista de navegação */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Oculta o menu por padrão */
+    transition: all 0.3s ease;
+}
+
+/* Exibe o menu em colunas quando aberto em telas menores */
+.aberto {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px; /* Abaixo da navbar */
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.aberto li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.aberto li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Estilo para menu em telas maiores */
+@media (min-width: 991px) {
+    .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+
+    .list li {
+        margin-left: 50px;
+    }
+}
+
+.btn-nav {
+    background-color: #fff;
+    color: #2cb2ea;
+    font-size: 17px;
+    width: 150px;
+    height: 40px;
+    border: 3px solid #426AB8;
+    border-radius: 5px;
+    padding: 7px;
+    font-weight: 600;
+}
+
+.btn-nav:hover {
+    background-color: #8adcff;
+    color: #000;
+}
